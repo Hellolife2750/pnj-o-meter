@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 508 285.75001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="dessin.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="0.18930626"
+     inkscape:cx="121.49625"
+     inkscape:cy="462.21399"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11756">
+      <stop
+         style="stop-color:#007408;stop-opacity:1"
+         offset="0"
+         id="stop11752" />
+      <stop
+         style="stop-color:#b69e61;stop-opacity:1"
+         offset="1"
+         id="stop11754" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient2913">
+      <stop
+         style="stop-color:#16fa66;stop-opacity:1"
+         offset="0"
+         id="stop3587" />
+      <stop
+         style="stop-color:#dca813;stop-opacity:1"
+         offset="0.49114203"
+         id="stop5518" />
+      <stop
+         style="stop-color:#fa1616;stop-opacity:1"
+         offset="1"
+         id="stop3589" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2913"
+       id="linearGradient2915"
+       x1="61.33691"
+       y1="211.99323"
+       x2="185.8401"
+       y2="211.99323"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.269419,0,0,1.269419,162.72291,-174.9673)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11756"
+       id="linearGradient11758"
+       x1="-61.177652"
+       y1="281.64727"
+       x2="225.99852"
+       y2="281.64727"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(128.58353,-171.91059)" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:43.4195px;line-height:1.25;font-family:sans-serif;fill:url(#linearGradient11758);fill-opacity:1;stroke:none;stroke-width:0.651292"
+       x="65.625679"
+       y="124.97692"
+       id="text8227"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan8225"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Zorque;-inkscape-font-specification:Zorque;fill:url(#linearGradient11758);fill-opacity:1;stroke-width:0.651292"
+         x="65.625679"
+         y="124.97692">PNJ-O-m eter</tspan></text>
+    <path
+       style="fill:url(#linearGradient2915);fill-opacity:1;stroke:#000000;stroke-width:0.634709;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 240.90646,134.99506 24.27648,0.17584 -0.22177,-7.87301 h -16.41135 c 2.06511,-23.35784 10.17419,-32.960468 18.14381,-42.880468 l 11.44775,11.29095 5.80229,-5.8023 -12.23185,-11.29093 c 4.93444,-3.82537 9.52917,-7.75265 16.46595,-10.97732 8.81421,-3.84328 17.95052,-6.39814 27.60008,-6.90001 l -0.15683,15.9955 7.84092,-0.15682 -0.15681,-16.15232 c 18.69065,1.46532 32.30984,8.27623 43.28194,17.87733 l -10.66367,11.60457 4.70456,5.33184 11.44776,-10.66366 c 13.62218,14.23176 17.21965,28.792208 18.19095,43.438748 l -16.46595,-0.62727 -0.15683,7.99775 24.62052,-0.15681 c 0.36153,-9.29832 -1.25271,-18.72011 -4.23409,-28.22735 -2.79394,-7.721988 -5.3462,-15.323138 -15.05459,-26.502358 -6.1965,-6.27766 -12.08794,-12.78411 -20.70006,-17.25006 -12.8744,-7.17294 -28.16815,-11.40965 -42.81147,-10.35003 -16.51667,1.19519 -32.67494,5.09935 -46.10466,18.5046 -10.5086,8.23702 -17.60251,18.79602 -22.89551,30.579648 -2.9774,10.64397 -5.41186,21.35864 -5.55757,33.01394 z"
+       id="path869"
+       sodipodi:nodetypes="ccccccccccccccccccccccccaccc"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g14392"
+       transform="translate(128.58353,-171.91059)"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img/logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.634709;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 191.71049,294.21854 c 10.89682,-9.09989 22.12931,-17.86411 33.76524,-26.2249 -7.98097,11.61564 -17.49143,22.33907 -27.22288,32.93359 -1.85311,-2.23623 -3.68156,-4.47245 -6.54236,-6.70869 z"
+         id="path2369"
+         sodipodi:nodetypes="cccc" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.634709;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path2164"
+         cx="190.60512"
+         cy="301.29578"
+         r="7.7163539" />
+    </g>
+  </g>
+</svg>
