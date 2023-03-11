@@ -19,7 +19,7 @@
         rel="stylesheet">
 
     <!-- charger le style -->
-    <link href="./css/reset.css" rel="stylesheet">
+    <link href="/css/reset.css" rel="stylesheet">
     <link href="/css/questions.css" rel="stylesheet">
 
     <!-- charger les icônes (font awesome)-->
@@ -44,7 +44,7 @@
 
                 <div class="slider">
                     <p>Rarement</p>
-                    <input type="range">
+                    <input type="range" min="0" max="100" value="50">
                     <p>Souvent</p>
                 </div>
 
@@ -53,6 +53,17 @@
                     <button id="previous-button" class="classic-button">Précédente</button>
                     <button id="next-button" class="classic-button">Suivante</button>
                 </div>
+                <!-- <h2 id="status-label">Statut</h2>
+                <h3 id="score-label">150/300</h3>
+                <p id="description-label">Descriptif</p>
+                <p id="quote-label">citation</p>
+
+                <div id="results-buttons">
+                    <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+                    <button class="classic-button" id="fiability-button">Doutes de fiabilité</button>
+                    <i id="share-button" class="fa-solid fa-share"></i>
+                </div> -->
+
             </div>
         </div>
     </main>
@@ -63,7 +74,7 @@
 
 
     <!-- charger le js -->
-    <script src="./js/questions.js"></script>
+    <script src="/js/questions.js"></script>
 
 </body>
 
