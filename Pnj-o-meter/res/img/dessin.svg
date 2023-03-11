@@ -25,9 +25,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      units="px"
-     inkscape:zoom="0.18930626"
-     inkscape:cx="121.49625"
-     inkscape:cy="462.21399"
+     inkscape:zoom="0.37861251"
+     inkscape:cx="710.48893"
+     inkscape:cy="756.71033"
      inkscape:window-width="1920"
      inkscape:window-height="1013"
      inkscape:window-x="-9"
@@ -84,6 +84,26 @@
        y2="281.64727"
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(128.58353,-171.91059)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11756"
+       id="linearGradient16807"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.55566745,0,0,0.55566745,225.99887,64.664944)"
+       x1="-61.177652"
+       y1="281.64727"
+       x2="225.99852"
+       y2="281.64727" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2913"
+       id="linearGradient16809"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.64653232,0,0,0.64653232,133.53049,73.504074)"
+       x1="61.33691"
+       y1="211.99323"
+       x2="185.8401"
+       y2="211.99323" />
   </defs>
   <g
      inkscape:label="Calque 1"
@@ -129,5 +149,55 @@
          cy="301.29578"
          r="7.7163539" />
     </g>
+    <path
+       style="fill:url(#linearGradient16809);fill-opacity:1;stroke:#000000;stroke-width:0.323267;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 173.35045,231.3721 12.36435,0.0895 -0.11292,-4.00982 h -8.35853 c 1.05179,-11.89646 5.18186,-16.78722 9.24089,-21.83961 l 5.8305,5.75064 2.95519,-2.95519 -6.22985,-5.75063 c 2.51318,-1.94832 4.85333,-3.94853 8.38634,-5.59089 4.48919,-1.95746 9.14243,-3.25867 14.05708,-3.51426 l -0.0799,8.14672 3.99348,-0.0799 -0.0799,-8.22659 c 9.51939,0.74631 16.45584,4.2152 22.04407,9.10518 l -5.43115,5.91036 2.3961,2.71558 5.8305,-5.43115 c 6.93798,7.24843 8.77021,14.66427 9.26491,22.12395 l -8.38633,-0.31948 -0.0799,4.07336 12.53958,-0.0799 c 0.18412,-4.73577 -0.63803,-9.53441 -2.1565,-14.37658 -1.42299,-3.9329 -2.72288,-7.80428 -7.66748,-13.498 -3.15599,-3.19731 -6.15656,-6.51113 -10.54284,-8.7857 -6.55709,-3.65329 -14.34642,-5.81109 -21.80444,-5.27141 -8.41219,0.60872 -16.64181,2.59716 -23.48176,9.42463 -5.35216,4.19523 -8.96519,9.57309 -11.66097,15.57464 -1.51645,5.42113 -2.75634,10.87825 -2.83056,16.81444 z"
+       id="path869-0"
+       sodipodi:nodetypes="ccccccccccccccccccccccccaccc"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img\icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g14392-4"
+       transform="matrix(0.50931361,0,0,0.50931361,116.14284,75.060894)"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img\icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.634709;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 191.71049,294.21854 c 10.89682,-9.09989 22.12931,-17.86411 33.76524,-26.2249 -7.98097,11.61564 -17.49143,22.33907 -27.22288,32.93359 -1.85311,-2.23623 -3.68156,-4.47245 -6.54236,-6.70869 z"
+         id="path2369-3"
+         sodipodi:nodetypes="cccc" />
+      <circle
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.634709;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path2164-0"
+         cx="190.60512"
+         cy="301.29578"
+         r="7.7163539" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:24.1269px;line-height:1.25;font-family:sans-serif;fill:url(#linearGradient16807);fill-opacity:1;stroke:none;stroke-width:0.361901"
+       x="191.01526"
+       y="229.63567"
+       id="text8227-0"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img\icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
+         sodipodi:role="line"
+         id="tspan8225-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Zorque;-inkscape-font-specification:Zorque;fill:url(#linearGradient16807);fill-opacity:1;stroke-width:0.361901"
+         x="191.01526"
+         y="229.63567">PNJ</tspan></text>
+    <rect
+       style="opacity:0;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.344455;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect17806"
+       width="82.883781"
+       height="82.883789"
+       x="171.81265"
+       y="172.51144"
+       inkscape:export-filename="C:\Users\Clément\Desktop\pnj-o-meter\Pnj-o-meter\res\img/icon.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
   </g>
 </svg>

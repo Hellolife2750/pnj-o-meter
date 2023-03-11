@@ -12,6 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
 body {
@@ -40,7 +41,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 80%;
 }
 
@@ -48,49 +49,66 @@ main {
   width: 40%;
 }
 
-#intro {
-  margin-top: 5rem;
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+#questions-bloc {
+  width: 100%;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 1.8rem; /*2%*/
+  text-align: center;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#intro h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  color: rgb(43, 99, 184);
-}
-
-#intro ul {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-#intro li {
-  text-align: center;
+#questions-bloc .question {
+  align-self: flex-start;
   font-size: 1.2rem;
-  line-height: 2rem;
-  transition: scale 0.5s ease-in-out 0.2s;
 }
 
-#intro ul i {
-  color: #46d814;
-  font-size: 1.2em;
+#questions-bloc .buttons-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
-#intro li:hover {
-  scale: 1.1;
-  transition: scale 0.5s ease-in-out;
-  cursor: default;
+#questions-bloc .slider {
+  display: flex;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.slider p {
+  font-size: 1.1rem;
+}
+
+.slider p:first-of-type {
+  margin-right: 1.5rem;
+}
+
+.slider p:last-of-type {
+  margin-left: 1.5rem;
+}
+
+.slider input:hover {
+  cursor: ew-resize;
 }
 
 .classic-button {
-  height: 3em;
-  width: 10em;
+  width: 7em;
   border: none;
-  border-radius: 10em;
+  border-radius: 5px;
+  padding: 12px 10px 12px 10px;
   background: #46d814;
-  font-size: 17px;
+  font-size: 1.1rem;
   color: #ffffff;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
@@ -99,15 +117,48 @@ main {
   box-shadow: 0 1px 1px rgba(18, 172, 56, 0.12),
     0 2px 2px rgba(56, 194, 21, 0.12), 0 4px 4px rgba(32, 161, 28, 0.12),
     0 8px 8px rgba(45, 161, 10, 0.12), 0 16px 16px rgba(40, 190, 21, 0.12);
+
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.classic-button#next-button {
+  animation: grow 2s cubic-bezier(0.3, 0.56, 0.23, 0.63) infinite both 0.5s;
+}
+
+.classic-button#next-button:hover {
+  animation-play-state: paused;
+}
+
+.classic-button#previous-button {
+  background: #e63c3c;
+  box-shadow: 0 1px 1px rgba(214, 67, 22, 0.12),
+    0 2px 2px rgba(194, 47, 21, 0.12), 0 4px 4px rgba(182, 49, 31, 0.12),
+    0 8px 8px rgba(201, 30, 24, 0.12), 0 16px 16px rgba(190, 32, 21, 0.12);
 }
 
 .classic-button:hover {
-  animation: shake3856 0.3s linear infinite both;
+  /*animation: shake3856 0.3s linear infinite both;*/
+
+  scale: 1.05;
+  transition: all 0.3s ease-in-out;
+  border-radius: 15px;
 }
 
 footer {
   position: absolute;
   bottom: 10px;
+}
+
+@keyframes grow {
+  0% {
+    scale: 1;
+  }
+  50% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
 }
 
 @keyframes shake3856 {
