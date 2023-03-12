@@ -54,7 +54,7 @@ const dcpList = ["Rien à signaler, t'es un gars tout à fait normal. Tu croques
 const citList = ["« La société veut des citoyens, elle ne veut pas des hommes. » - Oscar Wilde",
     "«La normalité est une route pavée : on y marche aisément mais les fleurs n'y poussent pas. - Vincent Van Gogh»",
     "«La société veut des moutons, elle trouvera toujours un berger.» - Michel Audiard",
-    "«Dans la vie, il n'y a qu'une chose qui soit vraiment importante : c'est de décider ce que l'on veut faire de sa vie. Une fois que l'on a compris cela, il ne reste plus qu'à se mettre au travail pour y arriver.» - Winston Churchill",
+    "«Dans la vie, il n'y a qu'une chose qui soit vraiment importante : c'est de décider ce que l'on veut faire de sa vie.» - Winston Churchill",
     "«Les conventions sont des inventions humaines et rien ne nous oblige à les suivre aveuglément.» - Bertrand Russell",
     "«Dans toute société, il y a des normes qui façonnent les comportements, mais la créativité vient de ceux qui savent briser ces normes et faire les choses différemment.» - Quelqu'un"]
 var statusIndex;
@@ -80,6 +80,8 @@ function initScoreList() {
 }
 
 function nextQuestion() {
+    if (finished) return
+
     scoreList[qsIndex] = slider.value;
     slider.value = 50;
     if (qsIndex + 1 < qsList.length) {
@@ -87,11 +89,14 @@ function nextQuestion() {
         changeQuestion();
     } else {
         desappearQuestionsMenu();
+
     }
     changeButtons()
 }
 
 function previousQuestion() {
+    if (finished) return
+
     if (qsIndex - 1 >= 0) {
         qsIndex--;
         changeQuestion();
@@ -139,10 +144,12 @@ function getStatus() {
 }
 
 function desappearQuestionsMenu() {
+    finished = true;
     questionsBloc.style.opacity = 0;
     //questionsBloc.style.filter = "brightness(0)";
     setTimeout(function () {
         questionsBloc.innerHTML = getResultCode();
+        spawSeveralConfettis();
         questionsBloc.style.opacity = 1;
         document.querySelector('main').style.height = "100%";
         shareButton = questionsBloc.querySelector('#share-button');
@@ -199,3 +206,41 @@ function changeQuestion() {
     noobMode ? qs = qsListNoob[qsIndex] : qs = qsList[qsIndex];
     question.innerText = qs;
 }
+
+/*confettis*/
+import { confetti } from "https://cdn.jsdelivr.net/npm/tsparticles-confetti/+esm";
+
+function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+const spawnConfettis = () => {
+    if (finished) {
+        confetti({
+            angle: randomInRange(55, 125),
+            spread: randomInRange(50, 70),
+            particleCount: randomInRange(50, 100),
+            origin: { y: 0.6 }
+        });
+    }
+};
+
+function spawSeveralConfettis() {
+    let count = 0;
+    let timeMin = 1;
+    let timeMax = 3;
+    spawnConfettis();
+    const interval = setInterval(() => {
+        spawnConfettis();
+        count++;
+        if (count >= 5) {
+            clearInterval(interval);
+        }
+    }, Math.floor(Math.random() * (timeMax * 1000 - timeMin * 1000 + 1)) + timeMin * 1000);
+}
+
+document.addEventListener('keypress', function (event) {
+    event.code === 'Space' ? spawnConfettis() : 0;
+});
+
+
