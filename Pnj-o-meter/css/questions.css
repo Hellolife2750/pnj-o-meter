@@ -113,6 +113,7 @@ main {
   display: flex;
   width: 100%;
   justify-content: space-between;
+  align-items: center;
 }
 
 #questions-bloc .slider {
@@ -169,6 +170,22 @@ main {
   box-shadow: 0 1px 1px rgba(214, 67, 22, 0.12),
     0 2px 2px rgba(194, 47, 21, 0.12), 0 4px 4px rgba(182, 49, 31, 0.12),
     0 8px 8px rgba(201, 30, 24, 0.12), 0 16px 16px rgba(190, 32, 21, 0.12);
+}
+
+.classic-button#noob-button {
+  font-size: 0.7rem;
+  height: auto;
+  width: 9em;
+  font-weight: normal;
+  padding: 10px 8px 10px 8px;
+  background: #275efe;
+  box-shadow: 0 1px 1px rgba(56, 95, 201, 0.12),
+    0 2px 2px rgba(92, 104, 212, 0.12), 0 4px 4px rgba(45, 75, 173, 0.12),
+    0 8px 8px rgba(73, 104, 192, 0.12), 0 16px 16px rgba(83, 129, 197, 0.12);
+}
+
+.classic-button#noob-button:hover {
+  border-radius: inherit;
 }
 
 .classic-button:hover {
@@ -293,7 +310,12 @@ footer {
 
 /* taille tablette */
 @media (max-width: 1000px) {
-  /*header*/
+  main {
+    width: 100%;
+  }
+  #content {
+    width: 80%;
+  }
 }
 
 /* taille smartphone */

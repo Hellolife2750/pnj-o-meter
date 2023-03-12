@@ -7,10 +7,44 @@ const slider = document.querySelector('#questions-bloc .slider input');
 const progressBar = document.querySelector('#content .progress-done');
 const questionsBloc = document.getElementById('questions-bloc');
 var shareButton;
+const noobButton = document.getElementById('noob-button');
 
 const qsList = ["Q1) Je m'immisce dans les échanges pour lesquels je n'ai point été convié",
     "Q2) Je m'exprime à propos de sujets qui peuvent être jugés insignifiants à l'oreille d'interlocuteurs qui n'y portent manifestement aucun intérêt",
-    "Q3) Je fais étalage de mes qualités et me présente sous un jour avantageux dans mes échanges verbaux."];
+    "Q3) Je fais étalage de mes qualités et me présente sous un jour avantageux dans mes échanges verbaux.",
+    "Q4) Je me complais dans des descriptions circonvolues pour expliciter une notion fondamentalement élémentaire",
+    "Q5) Je m'exprime avec une certaine suffisance et j'expose de manière récurrente ma connaissance sur divers sujets"
+    , "Q6) Je suis réfractaire à toute observation ou critique"
+    , "Q7) Je nourris constamment une vision négative des choses et mon attitude morose a une incidence sur l'humeur des personnes qui m'entourent"
+    , "Q8) Je ris de façon isolée et indépendante"
+    , "Q9) Je suis constamment enclin à dénigrer mes interlocuteurs"
+    , "Q10) Je me surmets en voix sans justification apparente"
+    , "Q11) Je lance des discussions futiles et sans réelle importance"
+    , "Q12) Je m'efforce d'adopter une attitude excentrique en usant de grimaces incessantes"
+    , "Q13) Je procrastine et sursois les obligations que j'ai pris envers autrui"
+    , "Q14) Je ne tiens guère compte de la notion de ponctualité"
+    , "Q15) Je m'exprime avec un cynisme constant et je porte continuellement une critique envers les instances d'autorité établies"
+    , "Q16) Je manifeste de la duplicité et de la servilité envers certaines personnes dans l'objectif d'en tirer profit"
+]
+
+const qsListNoob = ["Q1) Je m'incruste dans les conversations dans lesquelles je ne suis pas invité",
+    "Q2) Je parle de choses inintéressantes à des personnes qui manifestement n'en ont aucun intérêt",
+    "Q3) Je me valorise et me mets en avant à tire-larigot dans mes conversations",
+    "Q4) Je tourne autour du pot pour expliquer un truc méga simple",
+    "Q5) Je parle avec un air condescendant et j'étale ma science en permanence"
+    , "Q6) Je n'accepte pas les remarques"
+    , "Q7) Je suis toujours pessimiste et propage ma mauvaise humeur aux autres"
+    , "Q8) Je me tape des barres tout seul dans mon coin"
+    , "Q9) Je rabaisse constamment les autres"
+    , "Q10) Je me mets à parler fort sans aucune raison"
+    , "Q11) J'entame des débats pour des pacotilles"
+    , "Q12) J'essai de paraître le mec le plus chelou, notamment en faisant des grimaces h24"
+    , "Q13) Je retarde et évite de faire les choses que j'ai promis de faire avec d'autres personnes"
+    , "Q14) Je me pointe toujours en retard"
+    , "Q15) Je n'arrête pas de me plaindre de tout"
+    , "Q16) Je fais preuve de fourberie et fais le béni-oui-oui avec certaines personnes dans le but d'obtenir quelque chose"
+]
+
 const statusList = ["Normal", "Tendances PNJ", "PNJ modéré", "Vrai PNJ", "Giga PNJ"];
 const dcpList = ["Rien à signaler, t'es un gars tout à fait normal. Tu croques la vie à pleine temps sans te cringer.",
     "T'as l'air plutôt normal. Tu peux t'égarer quelques fois, mais rien d'alarmant. Continue dans cette voie.",
@@ -27,6 +61,12 @@ var statusIndex;
 var qsIndex = 0; question.innerText = qsList[qsIndex];
 var scoreList = []; initScoreList();
 var finished = false;
+var noobMode = false;
+var elapsedTime = 0;
+
+const timer = setInterval(function () {
+    elapsedTime++;
+}, 1000);
 
 changeButtons();
 
@@ -44,10 +84,8 @@ function nextQuestion() {
     slider.value = 50;
     if (qsIndex + 1 < qsList.length) {
         qsIndex++;
-        question.innerText = qsList[qsIndex];
+        changeQuestion();
     } else {
-        console.log(getScore());
-        console.log(getStatus());
         desappearQuestionsMenu();
     }
     changeButtons()
@@ -56,7 +94,7 @@ function nextQuestion() {
 function previousQuestion() {
     if (qsIndex - 1 >= 0) {
         qsIndex--;
-        question.innerText = qsList[qsIndex];
+        changeQuestion();
         slider.value = scoreList[qsIndex];
     }
     changeButtons()
@@ -114,11 +152,13 @@ function desappearQuestionsMenu() {
 }
 
 function getResultCode() {
+    let desc;
+    elapsedTime < qsList.length ? desc = "T'aurais pas juste cliqué n'importe où par hasard ?" : desc = dcpList[statusIndex];
     let code = `
     <h2 id="status-label">${getStatus()}</h2>
     <h3 id="score-label">${getScore()}/${qsList.length * 100}</h3>
-    <p id="description-label">${dcpList[statusIndex]}</p>
-    <p id="quote-label">${citList[Math.floor(Math.random() * Math.floor(qsList.length))]}</p>
+    <p id="description-label">${desc}</p>
+    <p id="quote-label">${citList[Math.floor(Math.random() * Math.floor(citList.length))]}</p>
     
     <div id="results-buttons">
     <a href="/index.html"><i class="fa-solid fa-house"></i></a>
@@ -142,4 +182,20 @@ function copyLink() {
     }, function (err) {
         console.error('Impossible de copier dans la presse-papier ', err);
     });
+}
+
+noobButton.addEventListener('click', switchNoobMode);
+
+function switchNoobMode() {
+    noobMode = !noobMode;
+    let text = "Noob Mode "
+    noobMode ? text += "ON" : text += "OFF";
+    noobButton.innerText = text;
+    changeQuestion();
+}
+
+function changeQuestion() {
+    let qs;
+    noobMode ? qs = qsListNoob[qsIndex] : qs = qsList[qsIndex];
+    question.innerText = qs;
 }
