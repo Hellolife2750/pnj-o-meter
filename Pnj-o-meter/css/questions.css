@@ -308,6 +308,24 @@ footer {
   }
 }
 
+@media (max-width: 1400px) {
+  main {
+    width: 80%;
+  }
+  #content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1200px) {
+  main {
+    width: 80%;
+  }
+  #content {
+    width: 70%;
+  }
+}
+
 /* taille tablette */
 @media (max-width: 1000px) {
   main {
@@ -320,5 +338,10 @@ footer {
 
 /* taille smartphone */
 @media (max-width: 700px) {
-  /*principal*/
+  main {
+    width: 100%;
+  }
+  #content {
+    width: 100%;
+  }
 }
