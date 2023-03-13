@@ -159,6 +159,7 @@ function desappearQuestionsMenu() {
 }
 
 function getResultCode() {
+    getStatus();
     let desc;
     elapsedTime < qsList.length ? desc = "T'aurais pas juste cliqué n'importe où par hasard ?" : desc = dcpList[statusIndex];
     let code = `
@@ -168,7 +169,7 @@ function getResultCode() {
     <p id="quote-label">${citList[Math.floor(Math.random() * Math.floor(citList.length))]}</p>
     
     <div id="results-buttons">
-    <a href="/index.html"><i class="fa-solid fa-house"></i></a>
+    <a href="../index.html"><i class="fa-solid fa-house"></i></a>
     <button class="classic-button" id="fiability-button">Doutes de fiabilité</button>
     <i id="share-button" class="fa-solid fa-share"></i>
     <div id="share-tooltip">Copié !</div>
