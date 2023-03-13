@@ -1,1 +1,0 @@
-# pnj-o-meter
