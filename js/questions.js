@@ -179,7 +179,7 @@ function getResultCode() {
 }
 
 function copyLink() {
-    navigator.clipboard.writeText("adresse").then(function () {
+    navigator.clipboard.writeText("https://hellolife2750.github.io/pnj-o-meter/").then(function () {
         const tooltip = document.getElementById("share-tooltip");
         tooltip.style.display = "block";
         tooltip.style.left = `${shareButton.offsetLeft - 5}px`;
