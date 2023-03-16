@@ -170,7 +170,7 @@ function getResultCode() {
     
     <div id="results-buttons">
     <a href="../index.html"><i class="fa-solid fa-house"></i></a>
-    <button class="classic-button" id="fiability-button">Doutes de fiabilité</button>
+    <a href="informations.html"><button class="classic-button" id="fiability-button">Doutes de fiabilité</button></a>
     <i id="share-button" class="fa-solid fa-share"></i>
     <div id="share-tooltip">Copié !</div>
     </div>

@@ -1,0 +1,188 @@
+/*général*/
+:root {
+  --primary: #0d6ce0;
+  --secondary: #2b81e9;
+  --light: whitesmoke;
+  --dark: black;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+*::selection {
+  background-color: #a6dcf5;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+#coockies-popup {
+  position: fixed;
+  bottom: 0;
+  margin: auto;
+  border-radius: 25px;
+  background-color: white;
+  opacity: 0.8;
+  width: 100vw;
+  height: 50vh;
+  padding: 2rem;
+
+  /*box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);*/
+  display: flex;
+  justify-content: space-around;
+  display: none;
+}
+
+#coockies-popup img {
+  /*width: 25%;*/
+  height: 100%;
+  position: relative;
+}
+
+#coockies-popup .left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#coockies-popup .left > * {
+}
+
+#coockies-popup h2 {
+  font-size: 3vw;
+  font-weight: bold;
+}
+
+#coockies-popup p {
+  font-size: 1.2em; /*1.2vw*/
+  line-height: 1.4em;
+}
+
+#coockies-overlay {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vw;
+  background-color: black;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+#coockies-popup .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.classic-button {
+  width: 30%;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 10px 12px 10px;
+  background: #46d814;
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 1.1rem;
+
+  box-shadow: 0 1px 1px rgba(18, 172, 56, 0.12),
+    0 2px 2px rgba(56, 194, 21, 0.12), 0 4px 4px rgba(32, 161, 28, 0.12),
+    0 8px 8px rgba(45, 161, 10, 0.12), 0 16px 16px rgba(40, 190, 21, 0.12);
+
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.classic-button.angry {
+  background: #e63c3c;
+  box-shadow: 0 1px 1px rgba(214, 67, 22, 0.12),
+    0 2px 2px rgba(194, 47, 21, 0.12), 0 4px 4px rgba(182, 49, 31, 0.12),
+    0 8px 8px rgba(201, 30, 24, 0.12), 0 16px 16px rgba(190, 32, 21, 0.12);
+}
+
+.classic-button:hover {
+  scale: 1.05;
+  transition: all 0.3s ease-in-out;
+}
+
+/*loader*/
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+#loader {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+#loader circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
