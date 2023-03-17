@@ -18,4 +18,5 @@ function showPage() {
     coockiesPopup.remove();
     coockiesOverlay.remove();
     loadingScreen.remove();
+    document.body.style.overflow = "visible";
 }
