@@ -309,6 +309,18 @@ footer {
   }
 }
 
+
+
+/* taille smartphone */
+@media screen and  (max-width: 700px) {
+  
+  body{
+    overflow: scroll;
+  }
+  
+  /*principal*/
+}
+
 @media (max-width: 1400px) {
   main {
     width: 80%;
@@ -327,7 +339,6 @@ footer {
   }
 }
 
-/* taille tablette */
 @media (max-width: 1000px) {
   main {
     width: 100%;
@@ -337,7 +348,6 @@ footer {
   }
 }
 
-/* taille smartphone */
 @media (max-width: 700px) {
   main {
     width: 100%;
@@ -345,4 +355,4 @@ footer {
   #content {
     width: 100%;
   }
-}
+} 
