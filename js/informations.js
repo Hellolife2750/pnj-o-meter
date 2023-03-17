@@ -7,8 +7,8 @@ const loadingScreen = document.querySelector('.loading');
 document.body.style.overflow = "hidden";
 
 setTimeout(function () {
-    coockiesPopup.style.display = "flex";
-    coockiesOverlay.style.display = "block";
+    /*coockiesPopup.style.display = "flex";
+    coockiesOverlay.style.display = "block";*/
 }, 2000);
 
 acpCoockiesBtn.addEventListener('click', showPage);
