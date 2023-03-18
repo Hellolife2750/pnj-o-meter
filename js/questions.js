@@ -246,4 +246,29 @@ document.addEventListener('keypress', function (event) {
     event.code === 'Space' ? spawnConfettis() : 0;
 });
 
+const body = document.querySelector('body');
+let secretInput = "";
+window.addEventListener('keydown', (event) => {
+    secretInput += event.key.toLowerCase();
+    if (secretInput.includes('nunoclement')) {
+        secretFunction();
+        secretInput = "";
+    }
+});
+
+function secretFunction() {
+    const secretSong = new Audio('../res/sfx/secret_song.ogg');
+    alert("Tu n'aurais pas dû activer ce secret.");
+    body.style.backgroundColor = "red";
+    playInLoop(secretSong);
+}
+
+function playInLoop(audio) {
+    audio.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    audio.play();
+}
+
 
