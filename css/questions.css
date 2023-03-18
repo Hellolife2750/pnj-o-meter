@@ -50,7 +50,7 @@ html {
 }
 .lettre {
   color: #484848;
-  font-size: 80px;
+  font-size: 8vw;
   letter-spacing: 15px;
   margin-bottom: 150px;
   animation: flash 1.2s linear infinite;
