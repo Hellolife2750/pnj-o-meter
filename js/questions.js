@@ -9,40 +9,40 @@ const questionsBloc = document.getElementById('questions-bloc');
 var shareButton;
 const noobButton = document.getElementById('noob-button');
 
-const qsList = ["Q1) Je m'immisce dans les échanges pour lesquels je n'ai point été convié",
-    "Q2) Je m'exprime à propos de sujets qui peuvent être jugés insignifiants à l'oreille d'interlocuteurs qui n'y portent manifestement aucun intérêt",
-    "Q3) Je fais étalage de mes qualités et me présente sous un jour avantageux dans mes échanges verbaux.",
-    "Q4) Je me complais dans des descriptions circonvolues pour expliciter une notion fondamentalement élémentaire",
-    "Q5) Je m'exprime avec une certaine suffisance et j'expose de manière récurrente ma connaissance sur divers sujets"
-    , "Q6) Je suis réfractaire à toute observation ou critique"
-    , "Q7) Je nourris constamment une vision négative des choses et mon attitude morose a une incidence sur l'humeur des personnes qui m'entourent"
-    , "Q8) Je ris de façon isolée et indépendante"
-    , "Q9) Je suis constamment enclin à dénigrer mes interlocuteurs"
-    , "Q10) Je me surmets en voix sans justification apparente"
-    , "Q11) Je lance des discussions futiles et sans réelle importance"
-    , "Q12) Je m'efforce d'adopter une attitude excentrique en usant de grimaces incessantes"
-    , "Q13) Je procrastine et sursois les obligations que j'ai pris envers autrui"
-    , "Q14) Je ne tiens guère compte de la notion de ponctualité"
-    , "Q15) Je m'exprime avec un cynisme constant et je porte continuellement une critique envers les instances d'autorité établies"
-    , "Q16) Je manifeste de la duplicité et de la servilité envers certaines personnes dans l'objectif d'en tirer profit"
+const qsList = ["Je m'immisce dans les échanges pour lesquels je n'ai point été convié",
+    "Je m'exprime à propos de sujets qui peuvent être jugés insignifiants à l'oreille d'interlocuteurs qui n'y portent manifestement aucun intérêt",
+    "Je fais étalage de mes qualités et me présente sous un jour avantageux dans mes échanges verbaux.",
+    "Je me complais dans des descriptions circonvolues pour expliciter une notion fondamentalement élémentaire",
+    "Je m'exprime avec une certaine suffisance et j'expose de manière récurrente ma connaissance sur divers sujets"
+    , "Je suis réfractaire à toute observation ou critique"
+    , "Je nourris constamment une vision négative des choses et mon attitude morose a une incidence sur l'humeur des personnes qui m'entourent"
+    , "Je ris de façon isolée et indépendante"
+    , "Je suis constamment enclin à dénigrer mes interlocuteurs"
+    , "Je me surmets en voix sans justification apparente"
+    , "Je lance des discussions futiles et sans réelle importance"
+    , "Je m'efforce d'adopter une attitude excentrique en usant de grimaces incessantes"
+    , "Je procrastine et sursois les obligations que j'ai pris envers autrui"
+    , "Je ne tiens guère compte de la notion de ponctualité"
+    , "Je m'exprime avec un cynisme constant et je porte continuellement une critique envers les instances d'autorité établies"
+    , "Je manifeste de la duplicité et de la servilité envers certaines personnes dans l'objectif d'en tirer profit"
 ]
 
-const qsListNoob = ["Q1) Je m'incruste dans les conversations dans lesquelles je ne suis pas invité",
-    "Q2) Je parle de choses inintéressantes à des personnes qui manifestement n'en ont aucun intérêt",
-    "Q3) Je me valorise et me mets en avant à tire-larigot dans mes conversations",
-    "Q4) Je tourne autour du pot pour expliquer un truc méga simple",
-    "Q5) Je parle avec un air condescendant et j'étale ma science en permanence"
-    , "Q6) Je n'accepte pas les remarques"
-    , "Q7) Je suis toujours pessimiste et propage ma mauvaise humeur aux autres"
-    , "Q8) Je me tape des barres tout seul dans mon coin"
-    , "Q9) Je rabaisse constamment les autres"
-    , "Q10) Je me mets à parler fort sans aucune raison"
-    , "Q11) J'entame des débats pour des pacotilles"
-    , "Q12) J'essai de paraître le mec le plus chelou, notamment en faisant des grimaces h24"
-    , "Q13) Je retarde et évite de faire les choses que j'ai promis de faire avec d'autres personnes"
-    , "Q14) Je me pointe toujours en retard"
-    , "Q15) Je n'arrête pas de me plaindre de tout"
-    , "Q16) Je fais preuve de fourberie et fais le béni-oui-oui avec certaines personnes dans le but d'obtenir quelque chose"
+const qsListNoob = ["Je m'incruste dans les conversations dans lesquelles je ne suis pas invité",
+    "Je parle de choses inintéressantes à des personnes qui manifestement n'en ont aucun intérêt",
+    "Je me valorise et me mets en avant à tire-larigot dans mes conversations",
+    "Je tourne autour du pot pour expliquer un truc méga simple",
+    "Je parle avec un air condescendant et j'étale ma science en permanence"
+    , "Je n'accepte pas les remarques"
+    , "Je suis toujours pessimiste et propage ma mauvaise humeur aux autres"
+    , "Je me tape des barres tout seul dans mon coin"
+    , "Je rabaisse constamment les autres"
+    , "Je me mets à parler fort sans aucune raison"
+    , "J'entame des débats pour des pacotilles"
+    , "J'essai de paraître le mec le plus chelou, notamment en faisant des grimaces h24"
+    , "Je retarde et évite de faire les choses que j'ai promis de faire avec d'autres personnes"
+    , "Je me pointe toujours en retard"
+    , "Je n'arrête pas de me plaindre de tout"
+    , "Je fais preuve de fourberie et fais le béni-oui-oui avec certaines personnes dans le but d'obtenir quelque chose"
 ]
 
 const statusList = ["Normal", "Tendances PNJ", "PNJ modéré", "Vrai PNJ", "Giga PNJ"];
@@ -68,6 +68,7 @@ const timer = setInterval(function () {
     elapsedTime++;
 }, 1000);
 
+changeQuestion();
 changeButtons();
 
 previousButton.addEventListener('click', previousQuestion);
@@ -203,9 +204,10 @@ function switchNoobMode() {
 }
 
 function changeQuestion() {
-    let qs;
-    noobMode ? qs = qsListNoob[qsIndex] : qs = qsList[qsIndex];
+    let qs = "Q" + (qsIndex + 1) + ") ";
+    noobMode ? qs += qsListNoob[qsIndex] : qs += qsList[qsIndex];
     question.innerText = qs;
+
 }
 
 /*confettis*/
@@ -243,5 +245,30 @@ function spawSeveralConfettis() {
 document.addEventListener('keypress', function (event) {
     event.code === 'Space' ? spawnConfettis() : 0;
 });
+
+const body = document.querySelector('body');
+let secretInput = "";
+window.addEventListener('keydown', (event) => {
+    secretInput += event.key.toLowerCase();
+    if (secretInput.includes('nunoclement')) {
+        secretFunction();
+        secretInput = "";
+    }
+});
+
+function secretFunction() {
+    const secretSong = new Audio('../res/sfx/secret_song.ogg');
+    alert("Tu n'aurais pas dû activer ce secret.");
+    body.style.backgroundColor = "red";
+    playInLoop(secretSong);
+}
+
+function playInLoop(audio) {
+    audio.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+    audio.play();
+}
 
 
