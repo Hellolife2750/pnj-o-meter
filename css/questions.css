@@ -104,7 +104,7 @@ html {
 .fondu-out {
   opacity: 0;
   transition: opacity 0.4s ease-out;
-  z-index: -1000;
+  z-index: 9999;
 }
 
 /*fin loader*/
@@ -391,6 +391,9 @@ footer {
   }
   .classic-button {
     font-size: 3vw;  
+  }
+  footer p{
+    font-size: 4vw;
   }
   
   /*principal*/

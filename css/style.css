@@ -48,8 +48,8 @@ html {
 }
 .lettre {
   color: #484848;
-  font-size: 80px;
-  letter-spacing: 15px;
+  font-size: 8vw;
+  letter-spacing: 12px;
   margin-bottom: 150px;
   animation: flash 1.2s linear infinite;
 }
@@ -102,7 +102,7 @@ html {
 .fondu-out {
   opacity: 0;
   transition: opacity 0.4s ease-out;
-  z-index: -1000;
+  z-index: 9999;
 }
 
 /*fin loader*/
@@ -230,6 +230,13 @@ footer {
   #intro h2 {
     font-size: 8vw;
   }
-  
+
+  .lettre {
+    font-size: 7vw;
+  }
+
+  footer p{
+    font-size: 4vw;
+  }
   /*principal*/
 }
