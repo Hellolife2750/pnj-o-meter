@@ -1,10 +1,12 @@
+
+//popup coockies
 const coockiesPopup = document.getElementById("coockies-popup");
 const coockiesOverlay = document.getElementById('coockies-overlay');
 const acpCoockiesBtn = document.querySelector('.hungry');
 const rfsCoockiesBtn = document.querySelector('.angry');
 const loadingScreen = document.querySelector('.loading');
 
-document.body.style.overflow = "hidden";
+/*document.body.style.overflow = "hidden";*/
 
 setTimeout(function () {
     /*coockiesPopup.style.display = "flex";
@@ -19,4 +21,13 @@ function showPage() {
     coockiesOverlay.remove();
     loadingScreen.remove();
     document.body.style.overflow = "visible";
+}
+
+//adapter la marge au header
+applyHeaderMargin();
+window.addEventListener("resize", applyHeaderMargin);
+
+function applyHeaderMargin() {
+    var headerHeight = document.querySelector('header').offsetHeight;
+    document.querySelector('main').style.marginTop = headerHeight + 'px';
 }
