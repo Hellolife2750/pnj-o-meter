@@ -25,6 +25,17 @@ const qsList = ["Je m'immisce dans les échanges pour lesquels je n'ai point ét
     , "Je ne tiens guère compte de la notion de ponctualité"
     , "Je m'exprime avec un cynisme constant et je porte continuellement une critique envers les instances d'autorité établies"
     , "Je manifeste de la duplicité et de la servilité envers certaines personnes dans l'objectif d'en tirer profit"
+    , "Je fais référence à ma personne en utilisant la troisième personne"
+    , "Je m'acquitte de mes tâches de manière incomplète dans un premier temps, puis je reviens sur mes pas afin de les achever ultérieurement"
+    , "Je fais usage d'un discours semblant indiquer une connaissance approfondie d'un sujet, alors que je ne dispose pas véritablement d'une expertise en la matière"
+    , "Je ne tolère pas de me considérer comme étant moins compétent que les autres personnes"
+    , "Je formule des interrogations qui n'ont pas véritablement d'utilité, afin de m'auto-répondre par la suite"
+    , "Je profère des plaisanteries peu réussies dans des situations qui ne se prêtent pas à l'humour, et en rit seul(e)"
+    , "Je suis réticent(e) à l'idée de subir des actions sournoises à mon encontre, mais je n'hésite pas à en perpétrer moi-même"
+    , "Je suis enclin(e) à critiquer les personnes avec lesquelles je suis en train de discuter, tout en agissant de manière agressive et conflictuelle envers elles"
+    , "Je m'exprime d'une manière qui manque souvent de cohérence ou de clarté, au point que les personnes avec qui je parle ont du mal à me comprendre ou se moquent de moi"
+    , "Je m'habille de manière décontractée en portant souvent des vêtements de sport, même dans des situations qui pourraient exiger une tenue plus formelle"
+    , "Je contrains autrui à se soumettre à mes desiderata"
 ]
 
 const qsListNoob = ["Je m'incruste dans les conversations dans lesquelles je ne suis pas invité",
@@ -43,6 +54,17 @@ const qsListNoob = ["Je m'incruste dans les conversations dans lesquelles je ne 
     , "Je me pointe toujours en retard"
     , "Je n'arrête pas de me plaindre de tout"
     , "Je fais preuve de fourberie et fais le béni-oui-oui avec certaines personnes dans le but d'obtenir quelque chose"
+    , "Je parle de moi à la 3e personne"
+    , "Je fais le travail à moitié, puis reviens sur mes pas pour le terminer par la suite"
+    , "Je parle de choses comme si je m'y connaissais alors que j'y connais rien"
+    , "Je n'accepte pas d'être moins fort que les autres"
+    , "Je pose des questions inutiles pour ensuite y répondre tout seul"
+    , "Je fais des blagues nulles dans des contextes qui ne s'y prettent pas (et je me tape une barre seul)"
+    , "Je n'aime pas qu'on me fasse des coups en douce mais moi j'en fais à balle"
+    , "Je tire à balle réelle et je critique les gens pendant que je suis en train de leur parler"
+    , "Ce que je dis n'a tellement pas de sens que les gens avec qui je parle se foutent de ma gu*ule"
+    , "Je m'habille en jog en toutes circonstances"
+    , "Je force les gens à faire ce que je veux faire"
 ]
 
 const statusList = ["Normal", "Tendances PNJ", "PNJ modéré", "Vrai PNJ", "Giga PNJ"];
