@@ -75,38 +75,78 @@ function getOsName() {
     return osName;
 }
 
-function isPrivateMode() {
-    return new Promise((resolve) => {
-      const on = () => resolve(true); // Le mode privé est activé
-      const off = () => resolve(false); // Le mode privé n'est pas activé
+// function isPrivateMode() {
+//     return new Promise((resolve) => {
+//       const on = () => resolve(true); // Le mode privé est activé
+//       const off = () => resolve(false); // Le mode privé n'est pas activé
   
-      // Vérifie si le mode privé est activé en essayant d'utiliser un objet de stockage privé
+//       // Vérifie si le mode privé est activé en essayant d'utiliser un objet de stockage privé
+//       try {
+//         const fs = window.RequestFileSystem || window.webkitRequestFileSystem;
+//         if (!fs) {
+//           // Le navigateur ne supporte pas l'API FileSystem
+//           return resolve(false);
+//         }
+  
+//         fs(
+//           window.TEMPORARY,
+//           100,
+//           () => off(),
+//           () => on(),
+//         );
+//       } catch (e) {
+//         // Le mode privé est activé
+//         on();
+//       }
+//     });
+//   }
+  
+
+
+async function isPrivateMode() {
+    let privateMode = false;
+  
+    // Vérifier si le navigateur prend en charge l'incognito
+    if (window.chrome && window.chrome.extension) {
+      // Chrome
+      privateMode = window.chrome.extension.inIncognitoContext;
+    } else if ('MozAppearance' in document.documentElement.style) {
+      // Firefox
+      const db = indexedDB.open('test');
       try {
-        const fs = window.RequestFileSystem || window.webkitRequestFileSystem;
-        if (!fs) {
-          // Le navigateur ne supporte pas l'API FileSystem
-          return resolve(false);
-        }
-  
-        fs(
-          window.TEMPORARY,
-          100,
-          () => off(),
-          () => on(),
-        );
+        await new Promise((resolve, reject) => {
+          db.onerror = () => {
+            privateMode = true;
+            resolve();
+          };
+          db.onsuccess = () => {
+            privateMode = false;
+            resolve();
+          };
+        });
       } catch (e) {
-        // Le mode privé est activé
-        on();
+        privateMode = true;
       }
-    });
-  }
+    } else {
+      // Safari, Edge, IE
+      try {
+        localStorage.setItem('test', 'test');
+        localStorage.removeItem('test');
+      } catch (e) {
+        privateMode = true;
+      }
+    }
   
+    return privateMode;
+  }
+
   
   
 
 // Exemple d'utilisation : affichage des informations du visiteur
 const ipInfo = document.getElementById('ipInfo');
 const nav = document.getElementById('navigateur');
+const navprivate = document.getElementById('navprivate');
 const systeme = document.getElementById('systeme');
 const language = window.navigator.language;
 const largeurEcran = window.screen.width;
@@ -117,6 +157,7 @@ const langue = document.getElementById('lang');
 const ipAddress = getCookie('ipAddress');
 const browserName = getCookie('browserName');
 const osName = getOsName();
+
 
 ipInfo.innerHTML = `
     <p>Adresse IP : ${ipAddress}</p>
@@ -133,6 +174,19 @@ langue.innerHTML = `
 taille.innerHTML = `
 <p>Taille de l'écran : ${largeurEcran} x ${hauteurEcran}</p>
 `;
-// localisation.innerHTML = `
-// <p>géolocalisation : ${local}</p>
-// `;
+
+
+
+function checkPrivateMode() {
+    return isPrivateMode().then(privateMode => {
+      if (privateMode) {
+        return "Navigateur privé activé";
+      } else {
+        return "Navigateur privé désactivé";
+      }
+    });
+  }
+  
+  checkPrivateMode().then(result => {
+    document.getElementById("navprivate").innerHTML = result;
+  });
