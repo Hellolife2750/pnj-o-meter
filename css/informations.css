@@ -370,6 +370,135 @@ a {
   text-decoration: none !important;
 }
 
+/*footer*/
+footer {
+  background-color: #32cd32;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+footer > h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+footer > h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2rem;
+  width: 77%;
+}
+
+footer .dev-card {
+  display: flex;
+  width: 70%;
+  height: 100%;
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  color: black;
+}
+
+#candidat-photo {
+  width: 25%;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+footer .dev-card .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.dev-card .left ul {
+  list-style-type: disc;
+}
+
+footer .dev-card .left,
+footer .dev-card .right {
+  width: 50%;
+}
+
+footer .dev-card .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.dev-card .right h3 {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#contact textarea {
+  background-color: whitesmoke;
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  border-radius: 1rem;
+  resize: none;
+  height: 100px;
+
+  transition: all 0.5s ease-in-out 0.2s;
+}
+
+#contact textarea:focus {
+  box-shadow: 0px 0px 10px white;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.classic-button {
+  color: whitesmoke;
+  background-color: #11d331;
+  border: 2px solid #11d331;
+  text-align: center;
+  border-radius: 2rem;
+  width: 10rem;
+  padding: 10px;
+  cursor: pointer;
+
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.classic-button:hover {
+  color: #11d331;
+  background-color: white;
+  font-weight: bold;
+  scale: 1.05;
+
+  transition: all 0.3s ease-in-out;
+}
+
 /* taille smartphone */
 @media screen and (max-width: 700px) {
   header {
