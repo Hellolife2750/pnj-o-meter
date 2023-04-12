@@ -5,7 +5,8 @@ window.addEventListener('load', () => {
     loader.classList.add('fondu-out');
 
 })
-setTimeout(() =>  {
+setTimeout(() => {
     const loader = document.querySelector('.fondu-out');
     loader.style.zIndex = '-10000'; // Nouvelle valeur de z-index
-},500)
+    loader.style.display = "none";
+}, 500)
