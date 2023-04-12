@@ -260,6 +260,7 @@ header li {
   transition: all 0.2s ease-in-out;
   color: whitesmoke;
   font-weight: bold;
+  display: block;
 }
 
 header li:hover {
@@ -273,6 +274,16 @@ header ul {
   display: flex;
   padding-top: 2vh;
   padding-bottom: 2vh;
+}
+
+#open-menu-btn {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: none;
 }
 /*fin header*/
 
@@ -367,6 +378,11 @@ a {
 
   header li {
     width: 100%;
+    display: none;
+  }
+
+  #open-menu-btn {
+    display: block;
   }
 
   header ul {

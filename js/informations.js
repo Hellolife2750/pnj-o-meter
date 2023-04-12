@@ -31,3 +31,19 @@ function applyHeaderMargin() {
     var headerHeight = document.querySelector('header').offsetHeight;
     document.querySelector('main').style.marginTop = headerHeight + 'px';
 }
+
+//menu header responsive
+const openMenuBtn = document.getElementById('open-menu-btn');
+const headerLis = document.querySelectorAll("header > nav > ul li");
+
+openMenuBtn.addEventListener("click", () => {
+    if (headerLis[0].style.display == "none") {
+        headerLis.forEach(li => {
+            li.style.display = "block";
+        });
+    } else {
+        headerLis.forEach(li => {
+            li.style.display = "none";
+        });
+    }
+});
