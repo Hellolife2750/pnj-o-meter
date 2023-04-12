@@ -34,16 +34,8 @@ function applyHeaderMargin() {
 
 //menu header responsive
 const openMenuBtn = document.getElementById('open-menu-btn');
-const headerLis = document.querySelectorAll("header > nav > ul li");
+let body = document.querySelector('body');
 
 openMenuBtn.addEventListener("click", () => {
-    if (headerLis[0].style.display == "none") {
-        headerLis.forEach(li => {
-            li.style.display = "block";
-        });
-    } else {
-        headerLis.forEach(li => {
-            li.style.display = "none";
-        });
-    }
+    body.classList.toggle("opened")
 });

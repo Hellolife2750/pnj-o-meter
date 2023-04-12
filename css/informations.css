@@ -381,6 +381,10 @@ a {
     display: none;
   }
 
+  .opened header li {
+    display: block;
+  }
+
   #open-menu-btn {
     display: block;
   }
