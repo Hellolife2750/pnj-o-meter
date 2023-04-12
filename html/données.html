@@ -37,6 +37,7 @@
 
     <header>
         <img src="../res/img/icon.png" alt="logo header" draggable="false">
+        <i id="open-menu-btn" class="fa-solid fa-bars"></i>
         <nav>
             <ul>
                 <a href="questions.html">
@@ -66,7 +67,14 @@
         <div id="localisation"></div>
     </div>
 
+    <script>
+        const openMenuBtn = document.getElementById('open-menu-btn');
+        let body = document.querySelector('body');
 
+        openMenuBtn.addEventListener("click", () => {
+            body.classList.toggle("opened")
+        });
+    </script>
 
     <script src="../js/localisation.js"></script>
 
