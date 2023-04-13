@@ -411,10 +411,11 @@ footer .dev-card {
   margin-top: 5%;
   margin-bottom: 5%;
   color: black;
+  position: relative;
 }
 
 #candidat-photo {
-  width: 25%;
+  width: 50%;
   border: 1px solid black;
   border-radius: 20px;
 }
@@ -425,15 +426,11 @@ footer .dev-card .left {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  width: 35%;
 }
 
 .dev-card .left ul {
   list-style-type: disc;
-}
-
-footer .dev-card .left,
-footer .dev-card .right {
-  width: 50%;
 }
 
 footer .dev-card .right {
@@ -442,6 +439,7 @@ footer .dev-card .right {
   justify-content: center;
   align-items: flex-start;
   text-align: left;
+  width: 65%;
 }
 
 .dev-card .right h3 {
@@ -495,8 +493,17 @@ footer .dev-card .right {
   background-color: white;
   font-weight: bold;
   scale: 1.05;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
   transition: all 0.3s ease-in-out;
+}
+
+#next-cdt-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
 }
 
 /* taille smartphone */

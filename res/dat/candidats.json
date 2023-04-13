@@ -1,0 +1,26 @@
+{
+    "candidats": [
+        {
+            "name": "Clément",
+            "description": "Salut moi c'est Clément. Bg, je ne passe pas inaperçu auprès des meufs. On dit même que mon sex appeal est égal à celui de DiCaprio. Sinon dans la vie je bouffe des CG, mais ça tlm s'en branle. Alors je te propose de me contacter via discord en écrivant un mess ci-dessous. Bisous bb. 😘",
+            "persoInfos": {
+                "birth": "21 juin 2001 (21ans)",
+                "profession": "Etudiant en info (2k€/mois)",
+                "size": "25,3cm (repos)"
+            },
+            "profilePic": "../res/img/Candidats/clement.png",
+            "messageToken": "1090753562558083102/vzrQ7ZzLjQ_PLOeYIyoOdtlJcvLq3gebu8vrcS-jRbG-FsFUlyeskOiR33i6gHKNJA0g"
+        },
+        {
+            "name": "None",
+            "description": "None",
+            "persoInfos": {
+                "birth": "None",
+                "profession": "None",
+                "size": "None"
+            },
+            "profilePic": "../res/img/Candidats/None.png",
+            "messageToken": "None"
+        }
+    ]
+}

@@ -161,13 +161,14 @@
                 </ul>
             </div>
             <div class="right">
-                <h3>Name</h3>
+                <h3 id="cdt-name">Name</h3>
                 <p class="paragraph" id="candidat-description">Description</p>
                 <form>
                     <textarea id="message-input" name="Message"></textarea>
-                    <button class="classic-button" id="send-application">Envoyer</button>
+                    <button class="classic-button" id="send-application" onsubmit="return false">Envoyer</button>
                 </form>
             </div>
+            <i id="next-cdt-btn" class="fa-solid fa-arrow-right fa-beat-fade"></i>
         </div>
         <p>&copy; 2023 - CPANNJ no right reserved | Powered by ChatGPT</p>
     </footer>

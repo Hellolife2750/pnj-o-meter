@@ -39,3 +39,76 @@ let body = document.querySelector('body');
 openMenuBtn.addEventListener("click", () => {
     body.classList.toggle("opened")
 });
+
+/*cartes candidats*/
+
+var candidats;
+var cdtIndex = 0;
+
+/*récupère le informations sur les candidats contenus dans le fichier json*/
+fetch('../res/dat/candidats.json')
+    .then(response => response.json())
+    .then(data => {
+        candidats = data.candidats;
+        updateCard();
+    })
+    .catch(error => console.error("Unable to load candidats' card content :", error));
+
+//mettre à jour la carte
+const theCard = document.querySelector("#contact .dev-card");
+const nextCdtBtn = document.getElementById('next-cdt-btn');
+
+const cdtPhoto = document.getElementById('candidat-photo');
+const cdtOverview = document.getElementById('quick-candidat-overfiew');
+const cdtName = document.getElementById('cdt-name');
+const cdtDescription = document.getElementById('candidat-description');
+
+function updateCard() {
+    cdtPhoto.src = candidats[cdtIndex]["profilePic"];
+    cdtName.innerText = candidats[cdtIndex]["name"];
+    cdtDescription.innerText = candidats[cdtIndex]["description"];
+
+    cdtOverview.children[0].innerText = candidats[cdtIndex]["persoInfos"]["birth"];
+    cdtOverview.children[1].innerText = candidats[cdtIndex]["persoInfos"]["profession"];
+    cdtOverview.children[2].innerText = candidats[cdtIndex]["persoInfos"]["size"];
+}
+
+//passer à la carte suivante
+nextCdtBtn.addEventListener('click', nextCard);
+function nextCard() {
+    if (candidats.length == 0) return;
+    if (cdtIndex < candidats.length - 1) {
+        cdtIndex++;
+    } else {
+        cdtIndex = 0;
+    }
+    updateCard()
+}
+
+//envoyer le message
+const sendApplicationBtn = document.getElementById('send-application');
+const messageInput = document.getElementById('message-input');
+
+sendApplicationBtn.addEventListener("click", () => {
+    sendMessage(messageInput.value);
+    messageInput.value = "";
+})
+
+//envoie un message sur un serv discord
+function sendMessage(message) {
+    try {
+        var request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/" + candidats[cdtIndex]["messageToken"], true);
+        request.setRequestHeader('Content-type', 'application/json');
+
+        var params = {
+            username: "MeeticMatch",
+            content: "" + message
+        };
+
+        request.send(JSON.stringify(params));
+    } catch (e) {
+        console.log("Impossible d'envoyer un message au serveur discord. Token invalide ??")
+    }
+
+}
