@@ -90,8 +90,10 @@ const sendApplicationBtn = document.getElementById('send-application');
 const messageInput = document.getElementById('message-input');
 
 sendApplicationBtn.addEventListener("click", () => {
-    sendMessage(messageInput.value);
-    messageInput.value = "";
+    let mess = messageInput.value;
+    if (mess == "") return;
+    sendMessage(mess);
+    messageInput.value = "Merciiiiii !";
 })
 
 //envoie un message sur un serv discord
@@ -111,4 +113,23 @@ function sendMessage(message) {
         console.log("Impossible d'envoyer un message au serveur discord. Token invalide ??")
     }
 
+}
+
+//faux liens média
+const fakeLinks = document.querySelectorAll('#social-medias > i');
+const fakeLinksPopup = document.getElementById('fake-links-popup');
+
+fakeLinks.forEach(function (link) {
+    link.addEventListener("click", fakeLinkClicked)
+});
+
+async function fakeLinkClicked() {
+    if (fakeLinksPopup.style.display == "block") return;
+    fakeLinksPopup.style.display = "block";
+    await sleep(4000);
+    fakeLinksPopup.style.display = "none";
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
