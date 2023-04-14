@@ -9,7 +9,8 @@
                 "size": "25,3cm (repos)"
             },
             "profilePic": "../res/img/Candidats/clement.png",
-            "messageToken": "1090753562558083102/vzrQ7ZzLjQ_PLOeYIyoOdtlJcvLq3gebu8vrcS-jRbG-FsFUlyeskOiR33i6gHKNJA0g"
+            "messageToken": "1090753562558083102/vzrQ7ZzLjQ_PLOeYIyoOdtlJcvLq3gebu8vrcS-jRbG-FsFUlyeskOiR33i6gHKNJA0g",
+            "sendedMessage": "Merci tu vas pas le regretter. Avec moi, tu vas passer des nuits d'enfer..."
         },
         {
             "name": "Nuno",
@@ -20,7 +21,8 @@
                 "size": "22,8cm (repos)"
             },
             "profilePic": "../res/img/Candidats/nuno.png",
-            "messageToken": "Nuno"
+            "messageToken": "Nuno",
+            "sendedMessage": "Merciii !!!"
         }
     ]
 }

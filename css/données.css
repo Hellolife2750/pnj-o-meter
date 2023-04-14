@@ -7,6 +7,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 /*header*/
@@ -98,6 +99,16 @@ header ul {
   height: 500px;
   margin-top: 2%;
   margin-bottom: 2%;
+}
+
+/*reasons*/
+#reasons {
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 1.5rem;
+  width: 25%;
 }
 
 /* taille smartphone */
