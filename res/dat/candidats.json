@@ -13,15 +13,15 @@
             "sendedMessage": "Merci tu vas pas le regretter. Avec moi, tu vas passer des nuits d'enfer..."
         },
         {
-            "name": "None",
-            "description": "None",
+            "name": "Nuno",
+            "description": "Bonjour je suis Nuno et je suis convaincu que mes compétences en informatique sont parmi les meilleures. J'ai travaillé dur pour obtenir une compréhension profonde des différents langages de programmation tel que le ruby React, Angular, Vue.js, Ember.js, Backbone.js, Meteor, Aurelia, Polymer, Knockout.js, Mithril, Svelte, Stimulus, Nest.js, Next.js, Nuxt.js, Express.js, Hapi.js, Feathers.js. J'ai même développé plusieurs applications et IA (en ruby) qui ont été utilisés par des milliers d'utilisateurs à travers le monde.",
             "persoInfos": {
-                "birth": "None",
-                "profession": "None",
-                "size": "None"
+                "birth": "08 octobre 2001 (20ans)",
+                "profession": "Etudiant en info (3k€/mois)",
+                "size": "22,8cm (repos)"
             },
-            "profilePic": "../res/img/Candidats/None.png",
-            "messageToken": "Nonetfghg",
+            "profilePic": "../res/img/Candidats/nuno.png",
+            "messageToken": "Nuno",
             "sendedMessage": "Merciii !!!"
         }
     ]
