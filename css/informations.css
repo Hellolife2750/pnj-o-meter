@@ -364,6 +364,7 @@ span.bold {
   line-height: 2rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 a {
@@ -396,6 +397,10 @@ footer > h3 {
   text-align: center;
   line-height: 2rem;
   width: 77%;
+}
+
+footer > p {
+  text-align: center;
 }
 
 footer .dev-card {
