@@ -91,43 +91,55 @@ const messageInput = document.getElementById('message-input');
 
 sendApplicationBtn.addEventListener("click", () => {
     let mess = messageInput.value;
-    if (mess == "") return;
+    if (mess == "") {
+        showNotificationPopup("Fais l'effort d'écrire un truc au moins gros flemmard va.", 'rgb(204, 63, 63)');
+        return;
+    }
     sendMessage(mess);
-    messageInput.value = "Merciiiiii !";
+    messageInput.value = "";
 })
 
 //envoie un message sur un serv discord
-function sendMessage(message) {
-    try {
-        var request = new XMLHttpRequest();
-        request.open("POST", "https://discord.com/api/webhooks/" + candidats[cdtIndex]["messageToken"], true);
-        request.setRequestHeader('Content-type', 'application/json');
+async function sendMessage(message) {
 
-        var params = {
-            username: "MeeticMatch",
-            content: "" + message
-        };
+    var request = new XMLHttpRequest();
+    const discordResponse = await fetch('https://discord.com/api/webhooks/' + candidats[cdtIndex]["messageToken"]);
+    request.open("POST", "https://discord.com/api/webhooks/" + candidats[cdtIndex]["messageToken"], true);
+    request.setRequestHeader('Content-type', 'application/json');
 
-        request.send(JSON.stringify(params));
-    } catch (e) {
-        console.log("Impossible d'envoyer un message au serveur discord. Token invalide ??")
+    var params = {
+        username: "MeeticMatch",
+        content: "" + message
+    };
+
+    request.send(JSON.stringify(params));
+
+    if (discordResponse.status === 401) {
+        showNotificationPopup("Impossible d'envoyer le message. La token de ce branleur de candidat doi être erroné.", 'rgb(204, 63, 63)');
+        //console.log("Impossible d'envoyer un message au serveur discord. Token invalide ??")
+    } else {
+        showNotificationPopup(candidats[cdtIndex]["sendedMessage"], 'rgb(38, 180, 133)');
     }
-
 }
 
 //faux liens média
 const fakeLinks = document.querySelectorAll('#social-medias > i');
-const fakeLinksPopup = document.getElementById('fake-links-popup');
+const notificationPopup = document.getElementById('notification-popup');
 
 fakeLinks.forEach(function (link) {
-    link.addEventListener("click", fakeLinkClicked)
+    link.addEventListener("click", () => {
+        showNotificationPopup("Et non l'ami ce sont de faux liens ! Tu crois vraiment qu'on n'a autant pas de vie que ça ?", 'rgb(204, 63, 63)');
+    })
 });
 
-async function fakeLinkClicked() {
-    if (fakeLinksPopup.style.display == "block") return;
-    fakeLinksPopup.style.display = "block";
+async function showNotificationPopup(message, bgColor) {
+    notificationPopup.style.backgroundColor = bgColor;
+    notificationPopup.querySelector("p").innerText = message;
+
+    if (notificationPopup.style.display == "block") return;
+    notificationPopup.style.display = "block";
     await sleep(4000);
-    fakeLinksPopup.style.display = "none";
+    notificationPopup.style.display = "none";
 }
 
 function sleep(ms) {
