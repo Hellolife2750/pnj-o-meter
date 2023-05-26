@@ -36,6 +36,11 @@ const qsList = ["Je m'immisce dans les échanges pour lesquels je n'ai point ét
     , "Je m'exprime d'une manière qui manque souvent de cohérence ou de clarté, au point que les personnes avec qui je parle ont du mal à me comprendre ou se moquent de moi"
     , "Je m'habille de manière décontractée en portant souvent des vêtements de sport, même dans des situations qui pourraient exiger une tenue plus formelle"
     , "Je contrains autrui à se soumettre à mes desiderata"
+    , "Je m'exprime de manière expressive et spontanée, utilisant parfois des onomatopées et des interjections qui pourraient rappeler le langage utilisé par nos ancêtres préhistoriques"
+    , "Je rencontre actuellement une difficulté qui m'empêche de m'exprimer de manière fluide et cohérente"
+    , "Je m'exprime d'une manière timide et peu audible"
+    , "Je manipule et brise les couverts de la cafétéria universitaire avec force et vigueur"
+    , "Il semble que je sois constamment sous l'influence de substances psychoactives"
 ]
 
 const qsListNoob = ["Je m'incruste dans les conversations dans lesquelles je ne suis pas invité",
@@ -65,6 +70,11 @@ const qsListNoob = ["Je m'incruste dans les conversations dans lesquelles je ne 
     , "Ce que je dis n'a tellement pas de sens que les gens avec qui je parle se foutent de ma gu*ule"
     , "Je m'habille en jog en toutes circonstances"
     , "Je force les gens à faire ce que je veux faire"
+    , "Je parle avec des onomatopées et des interjections si bien qu'on dirait un homme préhistorique qui parle"
+    , "Je suis tellement coincé du cul que j'arrive pas à aligner 2 mots"
+    , "Je parle avec une voix fluette"
+    , "Je tords et casse les fourchettes du RU"
+    , "On dirait que je suis shooté en permanence"
 ]
 
 const statusList = ["Normal", "Tendances PNJ", "PNJ modéré", "Vrai PNJ", "Giga PNJ"];
